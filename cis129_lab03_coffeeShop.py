@@ -9,7 +9,7 @@ muffin = int(input(' Number of muffins bought?\n '))
 fruits = int(input(' Number of fruits bought?\n '))
 smoothies = int(input(' Number of smoothies bought?\n '))
 
-#price of total cost of products individaly
+#price of total cost of products individually
 coffee_total = coffee * 5.00
 muffin_total = muffin * 4.00
 fruits_total = fruits * 2.00
