@@ -1,3 +1,6 @@
+#Dominic Neri
+#My Coffee Shop
+#Prints receipt
 print(' ***************************************\n My Coffee and Muffin Shop')
 
 #input numbers
