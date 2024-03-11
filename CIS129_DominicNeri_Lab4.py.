@@ -1,0 +1,45 @@
+# Module 4 Lab-4
+# Dominic Neri
+# 11MAR24
+# display bonus for a company
+
+monthly_Sales = 0 #monthly sales amount
+store_Amount = 0 #store bonus amount
+emp_Amount = 0 #employee bonus amount
+sales_Increase = 0 #percent of sales increase
+promt = 'Enter the total amount of sales for the month: $ '
+
+# This code gets the monthly sales
+monthly_Sales = float(input(promt))
+
+# This code determines the store bonus
+if monthly_Sales >= 110000:
+    store_Amount = 6000
+elif monthly_Sales >= 100000:
+    store_Amount = 5000
+elif monthly_Sales >= 90000:
+    store_Amount = 4000
+elif monthly_Sales >= 80000:
+    store_Amount = 3000
+else:
+    store_Amount = 0
+    
+# This code gets the percent of increase in sales
+sales_Increase = float(input('Enter the sales increase in decimal format: '))
+
+# This code determines the employee bonus
+sales_Increase = sales_Increase / 100
+if sales_Increase >= .05:
+    emp_Amount = 75
+elif sales_Increase >= .04:
+    emp_Amount = 50
+elif sales_Increase >= .03:
+    emp_Amount = 40
+else:
+    emp_Amount = 0    
+    
+# This code prints the bonus information    
+print('The store bonus amount is $', store_Amount)    
+print('The employee bonus amount is $', emp_Amount)
+if store_Amount == 6000 and emp_Amount == 75:
+    print('Congrats! You have reached the highest bonus amounts possible!')
