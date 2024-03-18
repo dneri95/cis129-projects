@@ -1,0 +1,35 @@
+# Module 5 Lab-5
+# Dominic Neri
+# 18MAR24
+# bottle counter
+
+total_bottles = 0 # Total number of bottles
+counter = 1 # Counter for while loop
+today_bottles = 0 # Bottles collected for the day
+total_payout = 0 # Total payout
+keep_going = 'y' # Variable for while loop
+ 
+# Setting the while loop for total count and price
+while keep_going == 'y':
+   
+    # Setting while loop for adding bottles and payout
+    while counter < 8:
+        today_bottles = int(input(f'Enter the number of bottles you collected on day {counter}: '))
+        total_bottles += today_bottles
+        total_payout = total_bottles * .10
+        counter += 1
+    
+    # Printing results    
+    print(f'You collected {total_bottles} bottles.\nYou received ${total_payout:.2f}.') 
+    
+    # Resetting the counter
+    total_bottles = 0 
+    counter = 1 
+    today_bottles = 0 
+    total_payout = 0 
+    
+    # Asking if user would like to repeat code
+    keep_going = input('Do you want to enter another weeks worth of data? (Enter y or n). ') 
+
+# Ending code
+print('Thank you.') 
