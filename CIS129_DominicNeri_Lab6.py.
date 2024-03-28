@@ -1,0 +1,37 @@
+# Module 6 Lab-6
+# Dominic Neri
+# 27MAR24
+# cookout
+
+#creating the function
+def hotdog_cookout():
+    
+    #creating the while loop for the function
+    keep_going = 'y'
+    while keep_going == 'y':
+
+        #defining the variables
+        total_hotdog = 10
+        total_buns = 8
+        people = int(input('How many people will be attending? '))
+        per_person = int(input('How many hotdogs per person? '))
+        total_person = people * per_person
+
+        #how many hot dogs youll need and leftovers
+        while total_person > total_hotdog:
+            total_hotdog += 10
+        leftover_hotdog = total_hotdog % people 
+        
+        #how many buns youll need and leftovers
+        while total_person > total_buns:
+            total_buns += 8 
+        leftover_buns = total_buns % total_person
+
+        #how many packages youll need
+        hotdog_amount = total_hotdog // 10
+        buns_amount = total_buns // 8
+        print(f'You will have {people} people attending your cookout. Each person will receive {per_person} hotdogs.\n'
+              f'You will need to buy {hotdog_amount} hotdog packages and {buns_amount} bun packages. \n'
+              f'You will have {leftover_hotdog} hotdogs left over and {leftover_buns} buns left over.')
+        keep_going = input('would you like to change the amount of people? (Enter y for yes): ')
+hotdog_cookout() 
