@@ -1,0 +1,52 @@
+# Module 7 Lab-7
+# Dominic Neri
+# 4APR24
+# Rolling dice game
+
+
+# Add libraries needed
+import random
+
+
+# The main function
+def main():
+    
+    # Initialize variables
+    end_program = 'no'
+    player_one = 'NO NAME'
+    player_two = 'NO NAME'
+    winner_p1 = 0
+    winner_p2 = 0
+   
+    # Call to input_names
+    player_one = input('Player 1 enter your name: ')
+    player_two = input('Player 2 enter your name: ')
+   
+    # While loop to run rogram again
+    while end_program == 'no':
+        
+        # Populate variables
+        winners_name = 'NO NAME'
+        p1_number = 0
+        p2_number = 0
+        # Call to roll_dice
+        p1_number = random.randint(1,6)
+        p2_number = random.randint(1,6)
+        
+        if p1_number > p2_number:
+            winners_name = player_one
+            winner_p1 += 1
+        elif p1_number < p2_number:
+            winners_name = player_two
+            winner_p2 += 1
+        else:
+            winners_name = 'Tie'
+       
+        #Call to display_info
+        print(f'{player_one} rolled {p1_number}\n{player_two} rolled {p2_number}\nWinner is {winners_name}')
+        print(f'Score\n {player_one}: {winner_p1}\n {player_two}: {winner_p2}')
+        end_program = input('Do you want to end program? (yes or no): ')
+        
+
+# Calls main
+main()
